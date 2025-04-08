@@ -13,4 +13,4 @@ df = pd.read_csv("^spx_d.csv")
 mean_sp = df['Close'].mean()
 higher_than_mean = df[df['Close'] > mean_sp]
 first_occ = higher_than_mean['Date'].min()
-print(first_occ)
+print(firs)
