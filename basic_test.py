@@ -10,5 +10,7 @@ df = pd.read_csv("^spx_d.csv")
 # print(df['High'].max()) 
 # print(df['High']) 
 
-high_2020 = df[df['Date'] == 2020].max()
-print(high_2020)
+mean_sp = df['Close'].mean()
+higher_than_mean = df[df['Close'] > mean_sp]
+first_occ = higher_than_mean['Date'].min()
+print(first_occ)
