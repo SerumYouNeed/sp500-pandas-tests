@@ -30,4 +30,8 @@ o_c_diff = open_close_diff(opens, closes)
 
 df['open_close_diff'] = o_c_diff
 
+print(df.head())
+
+df.to_csv("open_close_diff.csv")
+
 
