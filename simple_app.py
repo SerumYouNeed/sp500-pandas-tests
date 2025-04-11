@@ -28,10 +28,16 @@ opens = np.array(df['Open'])
 closes = np.array(df['Close'])
 o_c_diff = open_close_diff(opens, closes)
 
+# Liczę różnicę high/low
+highs = np.array(df['High'])
+lows = np.array(df['Low'])
+h_l_diff = high_low_diff(highs, lows)
+
 df['open_close_diff'] = o_c_diff
+df['high_low_diff'] = h_l_diff
 
 print(df.head())
 
-df.to_csv("open_close_diff.csv")
+df.to_csv("diffs.csv")
 
 
